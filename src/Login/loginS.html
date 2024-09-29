@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link type="stylesheet" href="./LoginS.css">
+    
+</head>
+<body>
+    <p>sign-in successful</p>
+    <button id="toggle-calendar">Show Calendar</button>
+<div id="notion-calendar" style="display: none;">
+    <p><a href="https://brazen-tie-2d9.notion.site/Personal-Timetable-Plan-10afc3d2c9618061a705df947360b932?pvs=4" target="_blank">Open Calendar</a></p>
+</div>
+<script>
+    document.getElementById('toggle-calendar').addEventListener('click', function() {
+        const calendar = document.getElementById('notion-calendar');
+        if (calendar.style.display === 'none') {
+            calendar.style.display = 'block';
+            this.innerText = 'Hide Calendar';
+        } else {
+            calendar.style.display = 'none';
+            this.innerText = 'Show Calendar';
+        }
+    });
+</script>
+
+</body>
+</html>
